@@ -1,15 +1,16 @@
 import java.util.Scanner;
+
 public class Test {
-public static void main (String args[]){
-int a, b,tempa,tempb;
-Scanner scan = new Scanner(System.in);
-a=scan.nextInt();
-b=scan.nextInt();
-tempa=a%100-a%10;
-tempb=b%100-b%10;
-a+=tempb-tempa;
-b+=tempa-tempb;
-System.out.println(a);
-System.out.println(b);
-}
-}
+            public static void main(String args[]) {
+                int a, b, tempa, tempb;
+                Scanner scan = new Scanner(System.in);
+                a = scan.nextInt();
+                b = scan.nextInt();
+                tempa = a % 100 - a % 10;
+                tempb = b % 100 - b % 10;
+                a += tempb - tempa;
+                b += tempa - tempb;
+                System.out.println(a);
+                System.out.println(b);
+            }
+        }
