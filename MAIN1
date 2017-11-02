@@ -1,0 +1,33 @@
+// задача, сколько приходится лет человеку на день проверки
+
+import java.util.GregorianCalendar;
+public class Main1 {
+    public static void main(String[] args) {
+//день рождения
+        GregorianCalendar birthDay = new
+                GregorianCalendar(1994, GregorianCalendar.MARCH, 24);
+        //дата проверки
+        GregorianCalendar checkDay = new
+                GregorianCalendar(2017, GregorianCalendar.NOVEMBER, 2);
+//разница в годах
+        int years = checkDay.get(GregorianCalendar.YEAR) -
+                birthDay.get(GregorianCalendar.YEAR);
+        //корректируем, если текущий месяц в дате проверки меньше месяца даты рождения
+        int checkMonth =
+                checkDay.get(GregorianCalendar.MONTH);
+        int birthMonth =
+                birthDay.get(GregorianCalendar.MONTH);
+        if (checkMonth < birthMonth ){
+            years--;
+        } else if (checkMonth == birthMonth
+            &&
+checkDay.get(GregorianCalendar.DAY_OF_MONTH) <
+        birthDay.get(GregorianCalendar.DAY_OF_MONTH)) {
+            years--;
+        }
+        System.out.println("years = " + years);
+        }
+    }
+
+
+
